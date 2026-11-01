@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite QiankunPT and the associated scientific article when using this software."
+type: software
+title: "QiankunPT: Distributed semistochastic Epstein–Nesbet perturbation theory on GPUs"
+repository-code: "https://github.com/fulz024/QiankunPT"
+version: 0.1.0rc1
+abstract: "Distributed semistochastic Epstein–Nesbet perturbation theory on GPUs for explicit determinant wavefunctions."
+authors:
+  - name: QiankunPT contributors
+license: BSD-3-Clause

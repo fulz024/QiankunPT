@@ -1,0 +1,16 @@
+name: CUDA tests (trusted runner)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cuda:
+    runs-on: [self-hosted, linux, x64, gpu]
+    timeout-minutes: 30
+    env:
+      MAX_JOBS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install -e ".[test]"
+      - run: qiankunpt doctor --build
+      - run: python -m pytest -m cuda
